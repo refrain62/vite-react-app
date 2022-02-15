@@ -4,6 +4,7 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+  const api_key = import.meta.env.VITE_API_KEY;
 
   return (
     <div className="App">
@@ -14,6 +15,10 @@ function App() {
           <button type="button" onClick={() => setCount((count) => count + 1)}>
             count is: {count}
           </button>
+          <div style={{ marginTop: '40px' }}>
+            環境変数<br />
+            VITA_API_KEY = { api_key }
+          </div>
         </p>
         <p>
           Edit <code>App.jsx</code> and save to test HMR updates.
